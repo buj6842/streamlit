@@ -1,23 +1,20 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  productionBrowserSourceMaps: false, // enable browser source map generation during the production build
-  // Configure pageExtensions to include md and mdx
+  productionBrowserSourceMaps: false,
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
-  experimental: {
-  },
-  // fix all before production. Now it slow the develop speed.
+  experimental: {},
   eslint: {
-    // Warning: This allows production builds to successfully complete even if
-    // your project has ESLint errors.
     ignoreDuringBuilds: true,
     dirs: ['app', 'bin', 'config', 'context', 'hooks', 'i18n', 'models', 'service', 'test', 'types', 'utils'],
   },
   typescript: {
-    // https://nextjs.org/docs/api-reference/next.config.js/ignoring-typescript-errors
     ignoreBuildErrors: true,
   },
   output: 'standalone',
-  reactStrictMode: true
-}
+  reactStrictMode: true,
 
-export default nextConfig
+  // 자산 파일 경로 설정 (필요 시 사용)
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/your-cdn-or-prefix/' : '',
+};
+
+export default nextConfig;

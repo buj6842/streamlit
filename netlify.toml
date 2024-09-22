@@ -1,0 +1,5 @@
+[[redirects]]
+from = "/(.*)"
+to = "/{lower:$1}"
+status = 301
+force = true
