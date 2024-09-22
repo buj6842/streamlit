@@ -1,0 +1,12 @@
+[build]
+base = ""
+command = "next build"  # npm run build -> next bulid 로 변경
+publish = ".next"
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
+
+[[plugins]]
+package = "@netlify/plugin-nextjs"
