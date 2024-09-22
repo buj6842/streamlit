@@ -1,5 +1,5 @@
 [build]
-base = "yarn buil"
+base = "yarn build"
 command = "nelify/functions"  # npm run build -> next bulid 로 변경
 publish = ".next"
 
