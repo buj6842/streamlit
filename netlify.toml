@@ -1,6 +1,6 @@
 [build]
-base = ""
-command = "next build"  # npm run build -> next bulid 로 변경
+base = "yarn buil"
+command = "nelify/functions"  # npm run build -> next bulid 로 변경
 publish = ".next"
 
 [[redirects]]
