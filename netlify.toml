@@ -1,9 +1,0 @@
-[build]
-command = "next build"  # 빌드 명령어를 next build로 설정
-publish = ".next"  # Next.js 빌드 결과물을 서빙하는 폴더
-functions = "netlify/functions"  # 서버리스 함수 경로 (필요할 때 설정)
-
-[[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200
